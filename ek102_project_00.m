@@ -5,20 +5,18 @@ Group Members:
 Jacob Janco, J. Vandame, Michael Webster, Trent Merrell, Stan Ng
 %}
 
-% MAIN FUNCTION
+% Main Function
 function ek102_project_00
 
 % Global & Default Variables, Preallocation Block
-% Preallocation of Steps...500 steps, dynamic allocation after
 global ROWS
 global COLUMNS
 
 ROWS = 3; 
 COLUMNS = 3;
-
 data_in = zeros( 3, 3 );
 
-% GUI Element block
+% GUI Element Block
 f = figure;
 set( f,...
     'Visible', 'off',...
@@ -30,7 +28,7 @@ set( f,...
     'Color', [ 0.8 0.8 0.8 ],...
     'InvertHardCopy', 'off' );
   
-row_box = uicontrol( ...
+row_box = uicontrol(...
     'Style', 'edit',...
     'Position', [ 750, 400, 100, 50 ] );
 
@@ -56,13 +54,13 @@ output_table_text = uicontrol(...
 
 entry_table = uitable(...
     'Data', data_in,...
-    'Position', [ 50, 250, 300, 200],...
+    'Position', [ 50, 250, 300, 200 ],...
     'ColumnWidth', {30},...
     'ColumnEditable', [ true true true ] );
 
 output_table = uitable(...
     'Data', data_in,...
-    'Position', [ 375, 250 300, 200],...
+    'Position', [ 375, 250 300, 200 ],...
     'ColumnWidth', {30} );
    
 mock_cout = uicontrol(...
@@ -76,22 +74,22 @@ op00 = uicontrol(...
     'Style', 'pushbutton',...
     'String' , 'op00',...
     'Position', [ 750, 300, 75, 25 ],...
-    'CallBack', @cb_op00);
+    'CallBack', @cb_op00 );
 
 op01 = uicontrol(...
     'Style', 'pushbutton',...
     'String' , 'op01',...
     'Position', [ 750, 250, 75, 25 ],...
-    'CallBack', @cb_op01);
+    'CallBack', @cb_op01 );
 
 op02 = uicontrol(...
     'Style', 'pushbutton',...
     'String' , 'op02',...
     'Position', [ 750, 200, 75, 25 ],...
-    'CallBack', @cb_op02);
+    'CallBack', @cb_op02 );
 
-movegui(f, 'center')
-set(f,'visible', 'on') 
+movegui( f, 'center' )
+set( f, 'visible', 'on' ) 
 
 function cb_rxc_button( ~, ~ )
     set ( entry_table, 'Visible', 'off' ) 
@@ -130,7 +128,7 @@ function cb_op00( ~, ~ )
     % Split steps up
     step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
-        step_splitter(i) = 01010;
+        step_splitter(i) = 010;
     end
     
     disp_mat = vertcat( temp_mat, step_splitter ); 
@@ -161,7 +159,6 @@ function cb_op00( ~, ~ )
     set( output_table,...
         'Data', op_data,...
         'Visible', 'on' ) 
-
 end
 
 function cb_op01( ~, ~ )
@@ -174,7 +171,7 @@ function cb_op01( ~, ~ )
     % Split steps up
     step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
-        step_splitter(i) = 01010;
+        step_splitter(i) = 010;
     end
 
     disp_mat = vertcat( temp_mat, step_splitter ); 
@@ -204,7 +201,7 @@ function cb_op02( ~, ~ )
     % Split steps up
     step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
-        step_splitter(i) = 01010;
+        step_splitter(i) = 010;
     end
 
     disp_mat = vertcat( temp_mat, step_splitter ); 
