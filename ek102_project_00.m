@@ -47,12 +47,12 @@ rxc_button = uicontrol(...
 entry_table_text = uicontrol(...
     'Style', 'text',...
     'String', 'Enter Values Here',...
-    'Position', [ 50, 460, 300, 25 ] )
+    'Position', [ 50, 460, 300, 25 ] );
 
 output_table_text = uicontrol(...
     'Style', 'text',...
     'String', 'Output Matrix',...
-    'Position', [ 375, 460, 300, 25 ] )
+    'Position', [ 375, 460, 300, 25 ] );
 
 entry_table = uitable(...
     'Data', data_in,...
@@ -63,13 +63,13 @@ entry_table = uitable(...
 output_table = uitable(...
     'Data', data_in,...
     'Position', [ 375, 250 300, 200],...
-    'ColumnWidth', {30} )
+    'ColumnWidth', {30} );
    
 mock_cout = uicontrol(...
     'Style', 'edit',...
     'Enable', 'inactive',...
     'Max', 2,...
-    'Position', [ 50, 25, 300, 200 ] )
+    'Position', [ 50, 25, 300, 200 ] );
 
 % Operation Block
 op00 = uicontrol(...
@@ -113,8 +113,6 @@ function cb_op00( ~, ~ )
     set ( output_table, 'Visible', 'off' ) 
     set ( mock_cout, 'Visible', 'off' )
 
-    % Start operation (Required: op_data, STEP_CELL_ARRAY)
-
     %{
     Ok quick explanation...
     temp_mat is essentially an output matrix of each step
@@ -129,12 +127,12 @@ function cb_op00( ~, ~ )
     % mock code: scalar multiplication by 2 
     temp_mat = get( entry_table, 'Data' );
 
-    % Split steps up 
+    % Split steps up
+    step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
         step_splitter(i) = 01010;
     end
     
-    disp_array = zeros( 1, (ROWS * COLUMNS) ) % pre-allocation
     disp_mat = vertcat( temp_mat, step_splitter ); 
 
     count = 0;
@@ -173,12 +171,12 @@ function cb_op01( ~, ~ )
     % Start operation (Required: op_data, STEP_CELL_ARRAY)
     temp_mat = get( entry_table, 'Data' );
 
-    % Split steps up 
+    % Split steps up
+    step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
         step_splitter(i) = 01010;
     end
-    
-    disp_array = zeros( 1, (ROWS * COLUMNS) ) % pre-allocation
+
     disp_mat = vertcat( temp_mat, step_splitter ); 
 
     op_data = temp_mat;
@@ -203,12 +201,12 @@ function cb_op02( ~, ~ )
     % Start operation (Required: op_data, STEP_CELL_ARRAY)
     temp_mat = get( entry_table, 'Data' );
 
-    % Split steps up 
+    % Split steps up
+    step_splitter = zeros( 1, COLUMNS );
     for i = 1:COLUMNS
         step_splitter(i) = 01010;
     end
-    
-    disp_array = zeros( 1, (ROWS * COLUMNS) ) % pre-allocation
+
     disp_mat = vertcat( temp_mat, step_splitter ); 
 
     op_data = temp_mat;
