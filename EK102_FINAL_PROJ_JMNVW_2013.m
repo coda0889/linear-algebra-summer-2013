@@ -299,8 +299,8 @@ function cb_step_bwd( ~, ~ )
 end
 
 function cb_op00( ~, ~ )
-    set ( mock_cout, 'Visible', 'off' )
-    set ( output_table, 'Visible', 'off' ) 
+    set( mock_cout, 'Visible', 'off' )
+    set( output_table, 'Visible', 'off' ) 
     set( history_step00, 'Visible', 'off' )
     set( history_step01, 'Visible', 'off' )
     set( history_step02, 'Visible', 'off' )
@@ -369,8 +369,8 @@ function cb_op00( ~, ~ )
 end
 
 function cb_op01( ~, ~ )
-    set ( mock_cout, 'Visible', 'off' )
-    set ( output_table, 'Visible', 'off' ) 
+    set( mock_cout, 'Visible', 'off' )
+    set( output_table, 'Visible', 'off' ) 
     set( history_step00, 'Visible', 'off' )
     set( history_step01, 'Visible', 'off' )
     set( history_step02, 'Visible', 'off' )
@@ -431,8 +431,8 @@ function cb_op01( ~, ~ )
 end
 
 function cb_op02( ~, ~ )
-    set ( mock_cout, 'Visible', 'off' )
-    set ( output_table, 'Visible', 'off' ) 
+    set( mock_cout, 'Visible', 'off' )
+    set( output_table, 'Visible', 'off' ) 
     set( history_step00, 'Visible', 'off' )
     set( history_step01, 'Visible', 'off' )
     set( history_step02, 'Visible', 'off' )
