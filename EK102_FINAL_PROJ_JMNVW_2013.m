@@ -6,7 +6,7 @@ Jacob Janco, Trent Merrell, Stan Ng, J. Vandame, Michael Webster
 %}
 
 % Main Function
-function ek102_project_00
+function EK102_FINAL_PROJ_JMNVW_2013
 
 % Global & Default Variables, Preallocation Block
 global ROWS
