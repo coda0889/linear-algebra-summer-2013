@@ -245,8 +245,7 @@ function cb_step_bwd( ~, ~ )
     set( history_step00, 'Visible', 'off' )
     set( history_step01, 'Visible', 'off' )
     set( history_step02, 'Visible', 'off' )
-    disp(INDEX)
-
+    
     if INDEX > 1
         INDEX = INDEX - ( STEP + 1 );
         INDEX_COUNT = INDEX_COUNT - 1;
